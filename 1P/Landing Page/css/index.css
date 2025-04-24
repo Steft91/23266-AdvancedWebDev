@@ -1,0 +1,176 @@
+main {
+    background-image: url("../img/cieloClaro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#modoOscuro:checked ~ main {
+    background-image: url("../img/cieloNoche.png");
+}
+
+@keyframes hero-bg {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 150%;
+    }
+}
+
+main section.hero .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #645c4e; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    border-radius: 10px;
+}
+
+main section.hero .center {
+    background-color: var(--celeste-oscuro-tr);
+    padding: 50px;
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-size: 1.2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.hero .foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.hero .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.typewriter h1 {
+    width: fit-content;
+    overflow: hidden; 
+    border-right: .15em solid rgb(166, 120, 209);
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+        typing 2s steps(30, end) forwards,
+        blink-caret .70s step-end infinite;
+    }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 48% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(161, 181, 236); }
+}
+
+.creadores h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #645c4e; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    background-color: rgba(235, 229, 182, 0.7);
+    border-radius: 10px;
+}
+
+.secciones {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(235, 229, 182, 0.7);
+    border-radius: 10px;
+    width: calc(33% - 10px); 
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: transform 0.3s;
+    animation: fadeIn 0.8s ease-in;
+    margin-bottom: 20px;
+}
+
+.contenedor h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #645c4e; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    background-color: rgba(235, 229, 182, 0.7);
+    border-radius: 10px;
+}
+
+.seccion .imgseccion img {
+    width: 100%; 
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.seccion:hover {
+    transform: translateY(-15px);
+}
+
+.seccion button {
+    margin-top: 1rem;
+    background-color: var(--celeste-oscuro-tr); 
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(125, 170, 207);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--celeste-oscuro-tr);
+}
+  
+  .seccion button:hover {
+    background-color: var(--celeste-oscuro-tr-2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px var(--celeste-oscuro-tr-2);
+    color: rgb(168, 204, 235);
+}
+  
+  .seccion button a {
+    color: rgb(227, 237, 245);
+    text-decoration: none;
+}
+  
