@@ -97,21 +97,6 @@ nav .acciones {
     background: white;
 }
 
-nav .acciones .carrito span {
-    background-color: red;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: block;
-    padding: 3px;
-    font-size: 12px;
-    line-height: 1;
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    color: white;
-}
-
 
 /* Modo oscuro toggle */
 
@@ -181,6 +166,10 @@ nav .acciones .carrito span {
 
 #modoOscuro:checked ~ footer .copyright{
     color: #cee0df;
+}
+
+#modoOscuro:checked ~ .cardBody .cardContent{
+    background-color: var(--celeste);
 }
 
 
