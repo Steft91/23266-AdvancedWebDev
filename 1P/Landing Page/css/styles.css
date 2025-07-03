@@ -25,6 +25,19 @@ body {
     font-size: 30px;
     color: var(--celeste);
 }
+ 
+.tittle {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  text-align: center;
+  color: #534630;
+  margin-bottom: 2rem;
+padding: 20px;
+background-color: rgba(235, 229, 182, 0.7);
+    border-radius: 30px;
+
+}
+
 
 header {
     position: sticky;
@@ -56,13 +69,17 @@ nav figure.logo {
     
 }
 
+#modoOscuro:checked ~ .tittle {
+    color: white;
+}
+  
 nav h1 {
     font-size: 2.5rem;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--celeste);
+    color: var(--celeste-oscuro);
     font-weight: bold;
     transition: 0.2s all ease-in-out;
 }
@@ -151,6 +168,11 @@ nav .acciones {
 #modoOscuro:checked ~ footer {
     background-color: var(--celeste-oscuro-tr-2);
 }
+
+#modoOscuro:checked ~ .contenedor .hero .tittle {
+  color: white;
+}
+
 
 #modoOscuro:checked ~ footer p{
     color: #cee0df;

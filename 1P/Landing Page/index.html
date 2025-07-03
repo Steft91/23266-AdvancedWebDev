@@ -29,12 +29,13 @@
     <main>
         <section class="contenedor">
             <section class="hero">
+                <h1 class="tittle">My Portfolio</h1>
                 <div class="container">
                     <div class="center">
                         <figure class="foto">
                             <img src="img/foto.jpg" height="100" alt="Logo">
                         </figure>
-                        <h1>My name is</h1>
+                        <h1>Hello, I'm</h1>
                         <div class="typewriter">
                             <h1>Stefany Díaz</h1>
                         </div>
@@ -47,7 +48,7 @@
             <section id="about" class="contenedor">
                 <section class="hero1">
                     <h2><i class="fa-solid fa-pencil"></i>About Me</h2>
-                    <p>Hi, I'm Stefany Díaz and I'm a passionate software engineering student who believes in the magic of what programming and reading can create.</p>
+                    <p><em>Hi, I'm Stefany Díaz and I'm a passionate software engineering student who believes in the magic of what programming and reading can create.</em></p>
                 </section>
 
                 <section class="infoTabla">
@@ -63,7 +64,12 @@
                 <section class="seccionA">
                     <section class="texto">
                         <h1>Mini Bio</h1>
-                        <p>I became interested in technology and software around the age of 17, fascinated by how websites and mobile apps worked. Since then, I've explored front-end and back-end development, always seeking to make digital experiences more human and intuitive.</p>
+                        <p>I became interested in technology and software around the age of 17, fascinated by how websites and mobile apps worked. Since then, I've explored front-end and back-end development, always seeking to make digital experiences more human and intuitive.
+                            <br>
+                            I have lived in several cities such as Cuenca, Ambato, and Loja due to my father's work.
+                            <br>
+                            I graduated from San Jose "La Salle" High School.
+                        </p>
                     </section>
                     <section class="imagen">
                         <img src="img/infoFoto.jpg" alt="bio">
@@ -74,7 +80,7 @@
                     <section class="texto">
                         <h1>Habilities</h1>
                         <ul>
-                            <li>💻 HTML, CSS, JavaScript</li>
+                            <li>💻 HTML, CSS, JavaScript, c++, c#, python</li>
                             <li>📦 UX/UI, Responsive Design</li>
                             <li>⚙️ Bootstrap</li>
                             <li>🎨 mongoDB, PostgreSQL, SQL Server</li>
@@ -88,7 +94,8 @@
                 <section class="seccionA">
                     <section class="texto">
                         <h1>Hobbies</h1>
-                        <p>When I'm not coding, you'll find me reading romance, fantasy and classic books. I also love listening to music and exploringplaces that teach me about the past and help me appreciate the present. I'm a big fan of hiking and camping, and I'm always looking for new adventures to start</p>
+                        <p>When I'm not coding, you'll find me reading romance, fantasy and classic books. I also love listening to music and exploring places that teach me about the past and help me appreciate the present. 
+                            <br>I'm a big fan of hiking and camping, and I'm always looking for new adventures to start</p>
                     </section>
                     <section class="imagen">
                         <img src="img/hobbies.jpg" alt="hobbies">
@@ -212,7 +219,11 @@
                             <input type="text" class="w1-2" name="apellido" id="apellido" placeholder="Apellido">
                             <input type="email" class="w1-2" name="email" id="email" placeholder="Correo electrónico">
                             <input type="number" class="w1-2" name="telefono" id="telefono" placeholder="Teléfono">
-                            <input value="Enviar" type="submit" class="login-button" />
+                            <textarea name="mensaje" id="mensaje" class="w1-2" placeholder="Escribe tu mensaje aquí..." rows="4"></textarea>
+                            <button type="submit" class="login-button">Enviar</button>
+                            <div id="toast" class="toast"><i class="fa-solid fa-star"></i>¡Recuerde llenar todos los campos!</div>
+
+
                         </form>
                     </div>
                 </div>
@@ -234,7 +245,6 @@
             </section>
             <section class="infoDerecha">
                 <section class="redesSociales">
-                    <a href="https://www.facebook.com/?locale=es_LA" class="icono"><img src="img/facebook.png" alt="Facebook" ></a>
                     <a href="https://www.instagram.com/" class="icono"><img src="img/Instagram.webp" alt="Ig" ></a>
                     <a href="https://twitter.com/?lang=es" class="icono"><img src="img/x.jpg" alt="X" ></a>
                 </section>  
@@ -246,6 +256,20 @@
         </section>
     </footer>
 
-    
+<script>
+        document.querySelector(".login-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Previene envío real del form
+
+            const toast = document.getElementById("toast");
+            toast.classList.add("show");
+
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        });
+</script>
+
+
 </body>
 </html>
