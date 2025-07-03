@@ -1,0 +1,115 @@
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #645c4e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Georgia', serif;
+  padding: 3rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.hero .center {
+  background-color: var(--celeste-oscuro-tr);
+  padding: 2rem;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-size: 1.2rem;
+  max-width: 700px;
+  width: 65%;
+}
+
+.hero .foto {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.hero .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto animado */
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid rgb(166, 120, 209);
+  margin: 0 auto;
+  width: fit-content;
+  animation: typing 2s steps(30, end) forwards, blink-caret .70s step-end infinite;
+}
+
+.description {
+    display: inline-block;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 30px;
+    color: #645c4e; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    background-color: rgba(235, 229, 182, 0.7);
+    border-radius: 30px;
+}
+
+
+.name {
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(161, 181, 236); }
+}
+
+.saludo {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+@media (max-width: 600px) {
+  .hero .center {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .hero .foto {
+    width: 140px;
+    height: 140px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .saludo {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

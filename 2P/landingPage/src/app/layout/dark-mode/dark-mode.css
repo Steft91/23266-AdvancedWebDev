@@ -1,0 +1,31 @@
+/* Modo oscuro toggle */
+
+#modoOscuro {
+    display: none;
+}
+
+.modoOscuroInterruptor {
+    position: relative; /* o elimina position */
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: rgba(214, 203, 160, 0.85);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* para separar del logo o links */
+    vertical-align: middle;
+}
+
+.modoOscuroInterruptor::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+

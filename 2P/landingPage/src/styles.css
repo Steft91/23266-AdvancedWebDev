@@ -1,0 +1,134 @@
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+:root {
+    --celeste: hsl(201, 54%, 79%);
+    --celeste-oscuro: hsl(202, 46%, 61%);
+    --celeste-oscuro-tr: hsla(202, 47%, 38%, 0.534);
+    --celeste-oscuro-tr-2: hsla(202, 53%, 20%);
+}
+
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--celeste);
+}
+ 
+.tittle {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    color: #534630;
+    margin-bottom: 2rem;
+    padding: 20px;
+    background-color: rgba(235, 229, 182, 0.7);
+    border-radius: 30px;
+
+}
+
+main {
+    background-image: url("assets/img/cieloClaro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.dark header {
+    background-color: var(--celeste-oscuro-tr-2);
+    
+}
+body.dark main {
+    background-image: url("assets/img/cieloNoche.png");
+}
+
+body.dark .tittle {
+    color: white;
+}
+  
+body.dark header nav a {
+    color: white;
+}
+
+body.dark header nav .acciones .login {
+    color: var(--celeste);
+    background: white;
+}
+
+body.dark .modoOscuroInterruptor {
+    background-color: #000000; 
+}
+
+body.dark .modoOscuroInterruptor::before {
+    transform: translateX(25px);
+}
+
+body.dark {
+    background-image: url("assets/img/cieloNoche.png");
+    color: #d1d1d1;
+}
+
+body.dark .contenedor nav {
+    background-color: rgba(45, 74, 34, 0.9);
+    color: #eee;
+}
+
+body.dark footer {
+    background-color: var(--celeste-oscuro-tr-2);
+}
+
+body.dark .contenedor .hero .tittle {
+  color: white;
+}
+
+body.dark footer p{
+    color: #cee0df;
+}
+
+body.dark footer p i{
+    color: #99b6d8;
+}
+
+body.dark footer p a{
+    color: #cee0df;
+}
+
+body.dark footer .copyright{
+    color: #cee0df;
+}
+
+body.dark main .cardContent {
+    background: hsl(196, 36%, 34%);
+}
+body.dark main .cardTitulo,
+body.dark main .cardAutor,
+body.dark main .cardAnio{
+    color: white;
+}
+
+body.dark main form input {
+    background: hsl(0, 0%, 15%);
+}
+
+body.dark main form textarea {
+    background: hsl(0, 0%, 15%);
+}
+
+body.dark main form .login-button {
+    background: linear-gradient(
+        45deg,
+        #58412a 0%,    
+        #A97458 100%    
+    );
+}
