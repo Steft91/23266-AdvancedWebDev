@@ -5,7 +5,7 @@
 }
 
 .modoOscuroInterruptor {
-    position: relative; /* o elimina position */
+    position: relative; 
     display: inline-block;
     width: 50px;
     height: 25px;
@@ -13,7 +13,7 @@
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 20px; /* para separar del logo o links */
+    margin-left: 20px; 
     vertical-align: middle;
 }
 

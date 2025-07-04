@@ -1,4 +1,4 @@
-.contenedor h2 {
+h2 {
     font-size: 24px;
     text-align: center;
     margin-top: 90px;
@@ -16,20 +16,19 @@
 }
 
 div.formulario {
-    font-family: 'Georgia', serif;
-    text-align: center;
-    max-width: 800px;
+  font-family: 'Georgia', serif;
+  justify-content: center;
+  max-width: 800px;
   margin: 0 auto;
   padding: 1.2rem;
 }
 
 form {
+  padding-left: 8rem;
+  padding-right: 8rem;
     font-family: 'Georgia', serif;
     justify-content: center;
     width: 100%;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
 form .w1-2 {
@@ -42,8 +41,7 @@ form .w1-2 {
   }
 
   .login-button {
-    width: 100%;
-    margin-top: 10px;
+    width: auto;
   }
 
   form textarea {
@@ -58,6 +56,7 @@ form input {
     padding: 15px 15px;
     border-radius: 20px;
     margin-top: 15px;
+    margin-right: 15px;
     box-shadow: #9c904a 0px 10px 10px -5px;
     border-inline: 2px solid transparent;
 }
@@ -85,11 +84,11 @@ form textarea {
     margin-top: 15px;
     box-shadow: #9c904a 0px 10px 10px -5px;
     border-inline: 2px solid transparent;
-    resize: none; 
-    width: calc(100% - 10px); 
-    min-height: 120px; 
-    padding-bottom: 30px;
+    width: calc(100% - 60%); 
+    min-height: 80px; 
 }
+
+
 
 form textarea::placeholder {
     color: rgb(170, 170, 170);
@@ -100,9 +99,12 @@ form textarea:focus {
     border-inline: 2px solid var(--celeste);
 }
 
+button {
+  padding: 0%;
+  margin: 0%;
+}
 
 .login-button {
-    display: block;
     width: 20%;
     height: 20%;
     font-weight: bold;
@@ -113,7 +115,7 @@ form textarea:focus {
     );
     color: white;
     padding-block: 15px;
-    margin: 20px auto;
+    margin: 20px ;
     border-radius: 20px;
     box-shadow: rgba(175, 129, 81, 0.6) 0px 20px 10px -15px;
     border: none;
@@ -140,7 +142,7 @@ form textarea:focus {
   top: 20px;
   right: 20px;
   background: rgba(88, 103, 134, 0.95); /* tono beige */
-  color: #fff8ed; /* café oscuro */
+  color: #fff8ed; 
   padding: 15px 25px;
   border-radius: 12px;
   font-family: Georgia, serif;
@@ -152,6 +154,7 @@ form textarea:focus {
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .toast.show {
   opacity: 1;
   transform: translateY(0);

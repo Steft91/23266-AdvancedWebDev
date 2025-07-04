@@ -117,18 +117,5 @@ body.dark main .cardAnio{
     color: white;
 }
 
-body.dark main form input {
-    background: hsl(0, 0%, 15%);
-}
 
-body.dark main form textarea {
-    background: hsl(0, 0%, 15%);
-}
 
-body.dark main form .login-button {
-    background: linear-gradient(
-        45deg,
-        #58412a 0%,    
-        #A97458 100%    
-    );
-}

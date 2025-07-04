@@ -1,27 +1,56 @@
-<section id="contact" class="contenedor">
-  <h2><i class="fa-solid fa-pencil"></i>Contact Me</h2>
-  <div class="formulario">
-    <div class="form">
-      <form (submit)="onSubmit($event); $event.preventDefault()">
-        <input type="text" class="w1-2" name="nombre" id="nombre" placeholder="Nombre" />
-        <input type="text" class="w1-2" name="apellido" id="apellido" placeholder="Apellido" />
-        <input type="email" class="w1-2" name="email" id="email" placeholder="Correo electrónico" />
-        <input type="number" class="w1-2" name="telefono" id="telefono" placeholder="Teléfono" />
-        <textarea
-          name="mensaje"
-          id="mensaje"
-          class="w1-2"
-          placeholder="Escribe tu mensaje aquí..."
-          rows="4"
-        ></textarea>
-        <button type="submit" class="login-button">Enviar</button>
-        @if (showToast()) {
-        <div id="toast" class="toast show">
-          <i class="fa-solid fa-star"></i>¡Recuerde llenar todos los campos!
-        </div>
-      }
+<section class="contact-container" id="contact-me">
+  <h2><i class="fa-solid fa-pencil"></i>Contáctanos</h2>
 
-      </form>
-    </div>
-  </div>
+  <form (submit)="onSubmit($event)" novalidate class="form">
+    <input class="name"
+  type="text"
+  placeholder="Tu nombre"
+  [value]="nombre()"
+  (input)="actualizarNombre($event)"
+  required
+/>
+
+<input
+  type="text"
+  placeholder="Tu apellido"
+  [value]="apellido()"
+  (input)="actualizarApellido($event)"
+  required
+/>
+<br>
+
+<input
+  type="email"
+  placeholder="Tu correo"
+  [value]="correo()"
+  (input)="actualizarCorreo($event)"
+  required
+/>
+
+<input
+  type="number"
+  placeholder="Tu Teléfono"
+  [value]="telefono()"
+  (input)="actualizarTelefono($event)"
+  required
+/>
+
+    <textarea
+      placeholder="Tu mensaje"
+      rows="5"
+      [value]="mensaje()"
+      (input)="actualizarMensaje($event)"
+      required
+    ></textarea>
+
+
+    <button type="submit" class="login-button">Enviar</button>
+
+
+    @if (showToast()) {
+      <div class="toast" [class.show]="showToast()" [innerHTML]="toastMensaje()"></div>
+    }
+    </form>
 </section>
+
+
