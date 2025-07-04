@@ -10,7 +10,8 @@ import { Hero } from './sections/hero/hero';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, ContactMe, AboutMe, Portfolio, Hero],
+  standalone: true,
+  imports: [Header, Footer, ContactMe, AboutMe, Portfolio, Hero],
   template: `
     <app-header></app-header>
     <main>

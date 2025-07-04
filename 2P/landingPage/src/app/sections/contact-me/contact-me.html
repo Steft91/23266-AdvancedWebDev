@@ -1,56 +1,28 @@
 <section class="contact-container" id="contact-me">
   <h2><i class="fa-solid fa-pencil"></i>Contáctanos</h2>
-
   <form (submit)="onSubmit($event)" novalidate class="form">
-    <input class="name"
-  type="text"
-  placeholder="Tu nombre"
-  [value]="nombre()"
-  (input)="actualizarNombre($event)"
-  required
-/>
 
-<input
-  type="text"
-  placeholder="Tu apellido"
-  [value]="apellido()"
-  (input)="actualizarApellido($event)"
-  required
-/>
-<br>
+    <div class="form-row">
+      <input type="text" placeholder="Tu nombre" [value]="nombre()" (input)="actualizarNombre($event)" required />
+      <input type="text" placeholder="Tu apellido" [value]="apellido()" (input)="actualizarApellido($event)" required />
+    </div>
 
-<input
-  type="email"
-  placeholder="Tu correo"
-  [value]="correo()"
-  (input)="actualizarCorreo($event)"
-  required
-/>
+    <div class="form-row">
+      <input type="email" placeholder="Tu correo" [value]="correo()" (input)="actualizarCorreo($event)" required />
+      <input type="number" placeholder="Tu Teléfono" [value]="telefono()" (input)="actualizarTelefono($event)" required />
+    </div>
 
-<input
-  type="number"
-  placeholder="Tu Teléfono"
-  [value]="telefono()"
-  (input)="actualizarTelefono($event)"
-  required
-/>
+    <div class="form-row">
+      <textarea placeholder="Tu mensaje" rows="5" [value]="mensaje()" (input)="actualizarMensaje($event)" required></textarea>
+    </div>
 
-    <textarea
-      placeholder="Tu mensaje"
-      rows="5"
-      [value]="mensaje()"
-      (input)="actualizarMensaje($event)"
-      required
-    ></textarea>
-
-
-    <button type="submit" class="login-button">Enviar</button>
-
+    <div class="form-row center">
+      <button type="submit" class="login-button">Enviar</button>
+    </div>
 
     @if (showToast()) {
       <div class="toast" [class.show]="showToast()" [innerHTML]="toastMensaje()"></div>
     }
-    </form>
+
+  </form>
 </section>
-
-
