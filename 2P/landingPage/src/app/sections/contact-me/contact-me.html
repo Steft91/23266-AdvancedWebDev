@@ -21,7 +21,9 @@
     </div>
 
     @if (showToast()) {
-      <div class="toast" [class.show]="showToast()" [innerHTML]="toastMensaje()"></div>
+      <div class="toast" [class.show]="showToast()" 
+        [innerHTML]="toastMensaje()">
+      </div>
     }
 
   </form>
